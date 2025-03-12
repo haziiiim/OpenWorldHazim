@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpup;
     public float speed;
     private Rigidbody rb;
-    private PlayerInput playerInput;
+   // private PlayerInput playerInput;
     PlayerInputActions playerInputActions;
     
     public void Awake()
@@ -18,10 +18,18 @@ public class PlayerMovement : MonoBehaviour
 
 
         rb = GetComponent<Rigidbody>();
-        PlayerInputActions playerInputActions = new PlayerInputActions();
+        playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
         playerInputActions.Player.Jump.performed += jump_performed;
         playerInputActions.Player.Move.performed += Move_performed;
+        
+    }
+    void FixedUpdate()
+    {
+        Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
+        
+
+        rb.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * speed, ForceMode.Force);
 
     }
 
@@ -32,13 +40,7 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * speed, ForceMode.Force);
     }
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        Vector3 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
-        
-        rb.AddForce(new Vector3(inputVector.x, 0, inputVector.y) * speed, ForceMode.Force);
-
-    }
+   
 
     //private void Jump_performed(InputAction.CallbackContext context)
     //{

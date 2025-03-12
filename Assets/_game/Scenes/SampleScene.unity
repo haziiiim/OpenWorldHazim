@@ -345,6 +345,18 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8812665099288507114, guid: 3c5fea687d9834b45a7bfebc112f316a, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812665099288507114, guid: 3c5fea687d9834b45a7bfebc112f316a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 112bc0d0-802c-4b44-8741-e5dddc72e56b
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812665099288507114, guid: 3c5fea687d9834b45a7bfebc112f316a, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812665099288507114, guid: 3c5fea687d9834b45a7bfebc112f316a, type: 3}
       propertyPath: m_DeviceLostEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -440,7 +452,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8812665099288507114, guid: 3c5fea687d9834b45a7bfebc112f316a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
