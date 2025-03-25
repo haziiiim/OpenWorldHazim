@@ -51,7 +51,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Shooting",
+                    "name": "Shoot",
                     "type": "Button",
                     "id": "e57ca8f8-8641-45b4-bac8-8b7d1d31e3bc",
                     "expectedControlType": "Button",
@@ -250,23 +250,12 @@
                 },
                 {
                     "name": "",
-                    "id": "4e75f532-08a2-49a9-8328-27793c69a9ec",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shooting",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "f793ab15-e9bf-4212-945c-b1e138d30f2f",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Shooting",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
